@@ -1,13 +1,8 @@
 import pandas as pd
-#import numpy as np
-#import matplotlib.pyplot as plt
 
 #1 - Load a CSV
 FILE_PATH = 'EmergencyTriageDataset_Reduced_Dirty.csv'
 df_raw = pd.read_csv(FILE_PATH)
-
-#print(f"Dataset loaded: {df_raw.shape[0]} rows x {df_raw.shape[1]} columns")
-#print(f"Columns: {list(df_raw.columns)}")
 
 #2 - See unique values
 print(df_raw['Gender'].unique())
@@ -15,7 +10,6 @@ print(f"\nTotal unique values: {df_raw["Gender"].nunique()}\n")
 
 #3 - Count each value
 print(df_raw["Gender"].value_counts())
-
 
 gender_map = {
     "Male":     1,
@@ -33,6 +27,16 @@ print("\n""===== AFTER CLEANING ===== ""\n")
 print(df_raw["Gender_Clean"].value_counts())
 print(f"Any NaN values? {df_raw["Gender_Clean"].isnull().sum()}\n")
 
+#Locating and flagging NaN value rows
+# nanrows = df_raw.loc[df_raw['Gender'].isna()].index
+# flagged = []
+# for x in nanrows:
+#     flagged.append(x)
+# print(f"Rows {flagged} have inconsistent data \n")
+
+#Fill NaN columns with 2, which means other
+df_raw = df_raw.fillna(2)
+
 #5 - Drop a column
 df_raw = df_raw.drop(columns = ["Gender"])
 
@@ -44,3 +48,20 @@ print("===== COLUMN 'Gender' AFTER CLEANING =====")
 print(df_raw["Gender"].value_counts())
 print(f"Data type: {df_raw["Gender"].dtype}\n")
 print(df_raw.head())
+
+#9 - Moving the gender column back to the 3rd place
+cols = df_raw.columns.tolist()
+cols.remove('Gender')
+cols.insert(2,'Gender')
+df_raw = df_raw[cols]
+
+#11 - Exporting the file as a copy
+df_raw.to_csv('Assignment_1/EmergencyTriageDataset_Reduced_GenderColumnCleaned.csv', index = False)
+print("\n""===== FINAL RESULT ===")
+print(df_raw.head())
+
+#Experimentation
+# print("\nStatistics")
+# print(df_raw.describe())
+# print("\nInfo")
+# print(df_raw.info())

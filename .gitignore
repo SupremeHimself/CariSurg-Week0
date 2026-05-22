@@ -1,1 +1,4 @@
 EmergencyTriageDataset_Reduced_Dirty.csv
+EmergencyTriageDataset_Reduced_GenderColumnCleaned.csv
+EmergencyTriageDataset_Reduced_Fio2ColumnCleaned.csv
+DatasetTesting.csv
