@@ -44,3 +44,9 @@ The GCS severity band shading carries direct clinical meaning by dividing the ch
 [Triage Pseudocode Document](https://drive.google.com/file/d/1lZUalM5gEYX9rtmq4zG8VTCE8E-cYTpL/view)
 
 This document outlines the pseudocode and logical flow behind the AI-powered triage system that is to be built over the coming weeks. It covers the seven phases of the triage pipeline. From patient intake and data collection, through scoring and risk categorization, to discharge documentation and post-visit recording. The pseudocode serves as the foundational blueprint for the system's decision making logic and is intended to guide development and clinical validation efforts.
+
+## Career Challenge ## 
+
+[Career Challenge Document](https://drive.google.com/file/d/109MVUfv2U-PpMzqqYUGwqnbRtogAPVi8/view?usp=sharing)
+
+This document contains my structured study plan and framework for completing the Healthcare AI Programme. Balancing a 9-5 job with intensive technical learning requires a disciplined approach, and this documentation outlines how I manage my time to ensure consistency and prevent burnout. To maintain high levels of focus and information retention after a full workday, I will adopt the Pomodoro Technique. This method breaks study sessions into focused intervals with scheduled breaks, which is essential for managing the complex, technical material in this programme, such as coding, machine learning, and healthcare systems.
