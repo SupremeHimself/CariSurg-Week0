@@ -27,13 +27,6 @@ print("\n""===== AFTER CLEANING ===== ""\n")
 print(df_raw["Gender_Clean"].value_counts())
 print(f"Any NaN values? {df_raw["Gender_Clean"].isnull().sum()}\n")
 
-#Locating and flagging NaN value rows
-# nanrows = df_raw.loc[df_raw['Gender'].isna()].index
-# flagged = []
-# for x in nanrows:
-#     flagged.append(x)
-# print(f"Rows {flagged} have inconsistent data \n")
-
 #Fill NaN columns with 2, which means other
 df_raw = df_raw.fillna(2)
 
@@ -59,9 +52,3 @@ df_raw = df_raw[cols]
 df_raw.to_csv('Assignment_1/EmergencyTriageDataset_Reduced_GenderColumnCleaned.csv', index = False)
 print("\n""===== FINAL RESULT ===")
 print(df_raw.head())
-
-#Experimentation
-# print("\nStatistics")
-# print(df_raw.describe())
-# print("\nInfo")
-# print(df_raw.info())
