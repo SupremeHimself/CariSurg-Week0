@@ -38,3 +38,9 @@ The clinical question this histogram addresses is: what is the distribution of o
 
 The clinical question this bar chart addresses is: does the level of consciousness as measured by GCS have any association with a patient's heart rate across the patient population at Mercer General ED? A bar chart is the most appropriate plot here because GCS is an ordinal variable with discrete scores, and grouping mean heart rate by each score respects that discrete nature while the error bars communicate variability within each group.
 The GCS severity band shading carries direct clinical meaning by dividing the chart into the three recognized neurological impairment categories (severe, moderate, and mild) immediately orienting the viewer to clinically significant thresholds. The tachycardia reference line at 100 bpm and bradycardia line at 60 bpm further contextualize the heart rate values, since abnormal readings in low GCS patients can indicate conditions such as raised intracranial pressure. Together these annotations transform the bar chart from a simple mean comparison into a clinically meaningful exploration of the relationship between consciousness level and cardiovascular response.
+
+## Triaging System Pseudocode ##
+
+[Triage Pseudocode Document](https://drive.google.com/file/d/1lZUalM5gEYX9rtmq4zG8VTCE8E-cYTpL/view)
+
+This document outlines the pseudocode and logical flow behind the AI-powered triage system that is to be built over the coming weeks. It covers the seven phases of the triage pipeline. From patient intake and data collection, through scoring and risk categorization, to discharge documentation and post-visit recording. The pseudocode serves as the foundational blueprint for the system's decision making logic and is intended to guide development and clinical validation efforts.
